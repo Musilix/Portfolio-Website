@@ -1,0 +1,467 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	min-width: 300px;
+/*	min-height: 450px;*/
+
+	/*background: black;*/
+
+/*	z-index: -5;*/
+	/*background:rgb(255,255,0);*/
+}
+
+#actual_collapsable1,#actual_collapsable2,#actual_collapsable3,#actual_collapsable4{
+    /*position:absolute;*/
+    /*border:3px double rgb(30,30,30);*/
+    /*width:700px;*/
+
+    /*border: 2px double green;*/
+    border-radius: 0px 0px 0px 0px;
+
+    max-height:0px;
+    
+    padding:0px 10px;
+    /*padding-left:70px;*/
+    margin:0;
+    /*margin-left:70px;*/
+    font-weight:bold;
+    /*height:0;*/
+    /*display:none;*/
+
+    overflow:hidden;
+
+    color:black;
+    background:rgb(200,240,220);
+
+    transition: max-height .25s ease-out;
+}
+
+/*#actual_collapsable1{*/
+/*      background:red;*/
+/*}*/
+/*#actual_collapsable2{*/
+/*      background:yellow;*/
+/*}*/
+/*#actual_collapsable3{*/
+/*      background:blue;*/
+/*}*/
+
+/*#actual_collapsable4{*/
+/*      background:green;*/
+/*}*/
+
+#collapsable1, #collapsable2, #collapsable3, #collapsable4{
+	opacity: .55;
+	transition: opacity .5s ease-out;
+}
+
+#collapsable1:hover, #collapsable2:hover, #collapsable3:hover, #collapsable4:hover{
+    cursor: pointer;
+    opacity:1.5;
+}
+
+#kareem{
+/*	width:500;
+	height: 500;*/
+	/*background: black;*/
+	z-index: 500;
+	position: fixed;
+	/*bottom: 0;*/
+	left:-1000px;
+}
+
+#kareem img{
+    /*display:none;*/
+	width: 1000px;
+	height: 600px;
+}
+ul{
+	margin-bottom:0px;
+	padding-left:140px;
+}
+li{
+	padding:25px;
+	display: inline-block;
+}
+
+#go-back img{
+	filter: invert(100%);
+	width: 25px;
+	height: 25px;
+}
+
+#go-back{
+	position:fixed;
+
+	bottom:50px;
+	right: 50px;
+
+	width:25px;
+	height: 25px;
+
+	z-index: 6;
+}
+
+
+
+#go-back:hover{
+	cursor: pointer;
+}
+
+#header-descriptive, #about-descriptive, #contact-descriptive{
+	position: relative;
+
+	resize: both;
+	/*uhhhhhhh so, wen we resize the height of the page, our text overflow gets a scroll bar
+	but it doesnt work.... hm. IVE ALSO SUBSTITUTED MAKING OUR NAV DIVS FIXED, BY JUST CHANGING THE
+	TEXT SIZE TO FIT ON THE PAGE(WITH THE VW PROPERTY)*/
+	overflow: auto;
+
+	margin:0;
+
+	width:0;
+	height:100%;
+
+	z-index: -1;
+
+	background: rgb(50,50,50);
+
+	font-family: "Space Mono";
+
+	/*word-break: break-all;*/
+	/*white-space: pre-line;*/
+}
+
+#final-statement{
+	position: relative;
+
+	bottom: 150px;
+}
+
+#meetme{
+	position: relative;
+
+
+	bottom: 45px;
+}
+
+#chimchom-descriptive{
+	z-index: 5;
+	/*background: orange;*/
+}
+
+#chimchom2-descriptive{
+	z-index: 4;
+	/*background: blue;*/
+}
+
+#chimchom3-descriptive{
+	z-index: 3;
+	/*background: yellow;*/
+}
+
+#chimchom-descriptive, #chimchom2-descriptive, #chimchom3-descriptive{
+	position:absolute;
+
+	resize: both;
+	overflow: auto;
+
+	left: 260px;
+	top: 0px;
+
+	margin:0px;
+	/*margin-top: 50px;*/
+
+	width: 0%;
+	height: 100%;
+
+	color:green;
+	font-family: "Space Mono";
+
+	background: rgb(25,25,25);
+}
+
+#chimchom-descriptive p, #chimchom2-descriptive p, #chimchom3-descriptive p{
+	font-size: 12px;
+
+	padding-left: 70px;
+	width: 65%;
+	/*position: fixed;*/
+	/*left: 250px;*/
+}
+.h2-holder{
+	position: relative;
+	left: 70px;
+	border-bottom: 1px solid green;
+	margin:0;
+	padding: 0 0 15px 0;
+	margin-bottom: 35px;
+	width:600px;
+}
+
+#chimchom-descriptive h2, #chimchom2-descriptive h2, #chimchom3-descriptive h2{
+	padding-bottom: 0;
+	margin-bottom: 0;
+	
+	/*padding-left: 350px;*/
+	width: 60%;
+}
+
+a:hover{
+	cursor: pointer;
+
+}
+
+#header-mini-pic, #about-mini-pic, #contact-mini-pic{
+	width: 60px;
+	height: 60px;
+
+	display: none;
+
+	opacity: 0;
+	
+	/*padding-top:60px;*/
+
+	transition: opacity 2s;
+
+}
+
+#header-descriptive p, #about-descriptive p, #contact-descriptive p{
+	position: relative;
+
+	padding-top: 40px;
+
+	width:20%;
+/*	min-height: 50%;*/
+	min-width: 550px;
+	font-size: .95vw;
+	/*height:70%;*/
+	color:green;
+
+	left:315px;
+}
+
+#about-descriptive{
+	z-index: -2;
+	/*background: grey;*/
+}
+
+#contact-descriptive{
+	z-index: -3;
+
+	left: 270px;
+
+
+	/*background: blue;*/
+}
+
+#contact-descriptive p{
+	padding-top: 10px;
+
+	left: 140px;
+}
+
+#contact-descriptive h2{
+	border-bottom: 1.5px solid green;
+
+	position: relative;
+	color:green;
+
+	width:800px;
+
+
+	left: 90px;
+}
+
+#fake-bg-holder{
+	width:100%;
+	height:100%;
+
+	position: absolute;
+
+	top:0;
+	left:0;
+
+	background: rgb(20,20,20);
+
+	z-index: -100;
+}
+
+#imgHolder{
+	z-index: -3;
+	filter: invert(100%);
+
+	margin: 0;
+
+	position: relative;
+	right: -50%;
+	bottom: 190px;
+
+
+	transform:rotate(-10deg);
+	/*ALSO VERY IMPORTANT FOR MAKING ANIMATION GO ON FOREVER!!!*/
+	/*NO JS NEEDED!!!!!!!!!!!!!!!!!*/
+	animation:rotation 5s infinite linear;
+	/*VERY IMPORTANT FOR MAKING ANIMATION GO BACC N FORTH!!!!!!!!!!!!!!!!*/
+	animation-direction: alternate;
+}
+
+@keyframes rotation{
+	from{transform: rotate(-10deg);}
+	to{transform:rotate(10deg);}
+}
+
+#p5-canvas-holder canvas, #p5-canvas-holder{
+	z-index: -1;
+	position: absolute;
+	margin:0;
+	padding:0;
+}
+
+#bubble-holder{
+
+	left: 0;
+	top: 0;
+	position: fixed;
+	/*display: inline;*/
+
+	/*z-index: 50;*/
+	width: 100%;
+
+	z-index: 20;
+	/*position: relative;*/
+/*	width: 210px;
+	margin: 0px;*/
+	/*z-index: 50;*/
+	/*position: fixed;*/
+	/*padding:25px;*/
+}
+
+/*#header-text, #about-section, #contact-section{
+	transition: width 1s; 
+}*/
+
+#header-text{
+	/*border-radius: 5500px;*/
+
+/*	WHOA WHOA WHOA WHOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+I JUST FIGURED SOMETHING OUT BY MISTAKE; I HAVE JAVASCRIPT SETTING THE HEIGTH OF MY
+DIVS ACCORDING TO THE WINDOW SIZE, SO I CAME HERE TO GET RID OF THEIR WIDTH N HEIGHT DECLARATION
+BUT NOW IT STRETCHES THEM ALL THE WAY OUT! AND I KINDA LIKE IT!... HM, WHY DOES IT DO THAT THO
+
+
+i THINK I KNOW WHY... MAYBE BECAUSE ITS PARENT DIVS... BUBBLE HOLDER??? SPANS 100%
+ACROSS AND NOW SINCE I HAVENT SPECIFIED A WIDTH, IT AUTO ADJUSTS TO ITS PARENTS... IDK, JUST A THOUGHT
+BUT JUST KNOW TO UNCOMMENT THIS IF YOU WANT YOUR BOXES BACK!!!!!!!!!*/
+/*	width:125px;
+	height:125px;*/
+
+	position: absolute;
+
+	padding: 25px;
+	/*margin:0 auto;*/
+
+
+	min-width: 210px;
+
+	/*background: #3B3B98;*/
+
+	position: relative;
+}
+
+#about-section{
+	/*border-radius: 5500px;*/
+
+/*	width:125px;
+	height:125px;*/
+
+	padding: 25px;
+	/*margin:0 auto;*/
+
+	min-width: 210px;
+
+	position: relative;
+	
+/*	background: #FC427B*/
+}
+
+#contact-section{
+	/*border-radius: 5500px;*/
+	
+/*	width:125px;
+	height:125px;*/
+	
+	padding: 25px;
+	/*margin:0 auto;*/
+
+	min-width: 210px;
+
+	position: relative;
+	
+/*	background: #6D214F*/
+}
+
+#welcome, #about, #contact{
+	opacity: 0;
+	font-family: 'Space Mono';
+	font-size: 25px;
+	text-align: center;
+	margin:0 auto;
+
+	/*padding-top:20px;*/
+
+	transition: opacity 1s;
+}
+
+#welcome-text, #about-text, #contact-text{
+	width:400px;
+	margin:0 auto;
+	padding-top: 10px;
+	opacity: 0;
+	color: white;
+	font-family: 'Space Mono';
+	font-size: 13.5px;
+	text-align: center;
+
+	transition: opacity 2s;
+}
+
+#header-text:hover #welcome, #header-text:hover #welcome-text{
+	opacity: 1;
+	cursor: pointer;
+}
+
+#about-section:hover #about, #about-section:hover #about-text{
+	opacity: 1;
+	cursor: pointer;
+}
+
+#contact-section:hover #contact, #contact-section:hover #contact-text{
+	opacity: 1;
+	cursor: pointer;
+}
+
+#header-text:hover #header-mini-pic{
+	opacity: 1;
+	cursor: pointer;
+}
+
+#about-section:hover #about-mini-pic{
+	opacity: 1;
+	cursor: pointer;
+}
+
+#contact-section:hover #contact-mini-pic{
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
