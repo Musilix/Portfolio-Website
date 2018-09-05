@@ -149,14 +149,14 @@ li{
 }
 
 #chimchom-descriptive p, #chimchom2-descriptive p, #chimchom3-descriptive p{
-	font-size: 18px;
+	font-size: 1vw;
 
 	/*watch out for dat*/
 	padding-left: 70px;
 
 	/*note that I made the width static here, which leads to less of a dynamic, responsive site, but there is always time to go back and fix this
 	for now tho, the set widths of the description pages are fine! and if they dont fully fit on computer screens, scroll capabilities are always there*/
-	width: 1200px;
+	width: 75%;
 }
 
 .h2-holder{
@@ -299,10 +299,10 @@ a:hover{
 }
 
 #navs img{
-	width:150px;
-	height: 150px;
+	width:70px;
+	height: 70px;
 
-	filter: invert(100%);
+	filter: invert(80%);
 }
 
 #p5-canvas-holder canvas, #p5-canvas-holder{
@@ -378,26 +378,41 @@ a:hover{
 
 #welcome, #about, #contact{
 	opacity: 0;
+
 	font-family: 'Space Mono';
-	font-size: 45px;
+	font-size: 200%;
+
 	text-align: center;
+
 	margin:0 auto;
 
 	transition: opacity 1s;
 }
 
 #welcome-text, #about-text, #contact-text{
-	width:400px;
+	/*having the set width here begins to make the page look weird if you start zooming in too much
+	but the thing is, without it, our p element is spanned across the entire page. try sizing the div its contained in*/
+	/*width:400px;*/
+
+	width:50vw;
+
 	margin:0 auto;
 	padding-top: 10px;
+
 	opacity: 0;
 	color: white;
+
 	font-family: 'Space Mono';
-	font-size: 15px;
+	font-size: 100%;
+
 	text-align: center;
 
 	transition: opacity 1s ease-out;
 }
+
+/*#welcome-text-holder, #about-text-holder, #contact-text-holder{
+	width:50%;
+}*/
 
 #header-text:hover #welcome, #header-text:hover #welcome-text{
 	opacity: 1;

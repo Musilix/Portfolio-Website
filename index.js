@@ -10,14 +10,18 @@ $(document).ready(function(){
 			var newWidthHolder = $(window).width() - 260 + 'px';
 			var onPage = 0;
 
+			setWidthOfDescriptions(parseInt(newWidthHolder));
+
 			//confusion arose over why .width() and .height() were not working properply with $(document).ready(), but ultimately I figured out that
 			//The document ready event executes already when the HTML-Document is loaded and the DOM is ready, even if all the graphics haven’t loaded yet...
 			//The window load event executes a bit later when the complete page is fully loaded, including all frames, objects and images. 
 			$(window).on('load', function(){
 	            centerTextInNavs();
+	            // setWidthOfDescriptions();
 			});
 
 			//put in array l8r
+			// can prob do wit jquery, but dont feel like messing w/ their obj notation stuff
 			var content1 = document.getElementById("actual_collapsable1");
 			var content2 = document.getElementById("actual_collapsable2");
 			var content3 = document.getElementById("actual_collapsable3");
@@ -68,35 +72,6 @@ $(document).ready(function(){
                 showCollapsable(4);
                 currentOpen = content4;
 			});
-
-//////////////////////////////////////////////////////////////////////////
-			
-			function showCollapsable(showThisOne){
-			   var toggledCollapsable = showThisOne;
-			     
-			   if(toggledCollapsable == 1){
-			       content = content1;
-			       // content[0].style.height = "500px";
-			   }else if(toggledCollapsable == 2){
-			       content = content2;
-			   }else if(toggledCollapsable == 3){
-			       content = content3;
-			   }else{
-			       content = content4;
-			   }
-
-	     	   if(content.style.maxHeight){
-	     	   		content.style.maxHeight = null;
-	     	   }else{
-	     	   		content.style.maxHeight = content.scrollHeight + "px";
-	     	   		// currentOpenCollapsable.style.maxHeight = null;
-	     	   }
-
-	     	   if(currentOpen !== null && currentOpen !== content){
-	     	   	currentOpen.style.maxHeight = null;
-	     	   }
-	     	   
-			}
 			
 			
 //////////////////////////////////////////////////////////////////////////
@@ -132,15 +107,20 @@ $(document).ready(function(){
 					$("#chimchom-descriptive").css({
 						width: newWidthHolder
 					});
+					setWidthOfDescriptions(parseInt(newWidthHolder));
 				}else if(onPage == 2){
 					$("#chimchom2-descriptive, #actual_collapsable1, #actual_collapsable2, #actual_collapsable3, #actual_collapsable4").css({
 						width: newWidthHolder
 					});
+					setWidthOfDescriptions(parseInt(newWidthHolder));
 				}else if(onPage == 3){
 					$("#chimchom3-descriptive").css({
 						width: newWidthHolder
 					});
+					setWidthOfDescriptions(parseInt(newWidthHolder));
 				}
+
+
 				
 				maxHeight = $(window).height();
 				$("#header-text, #about-section, #contact-section").css({
@@ -180,6 +160,42 @@ $(document).ready(function(){
 			});
 
 
+//////////////////////////////////////////////////////////////////////////
+
+			//logic on collapsable divs for project descriptions on about page
+			//figures out which should be closed when one is opened.
+			//if none are currently opened, then it simply just opens the one that is clicked
+
+			//also makes sure to scroll the html page to any divs that appear and cut off the page
+			//I just realized, i was trying to animate the html and body's scrolltop val, but i should be
+			//animating the scrolltop of our chimchom descriptions as those are holding all the content for each section
+
+			function showCollapsable(showThisOne){
+			   var toggledCollapsable = showThisOne;
+
+			     
+			   if(toggledCollapsable == 1){
+			       content = content1;
+			       // content[0].style.height = "500px";
+			   }else if(toggledCollapsable == 2){
+			       content = content2;
+			   }else if(toggledCollapsable == 3){
+			       content = content3;
+			   }else{
+			       content = content4;
+			   }
+
+	     	   if(content.style.maxHeight){
+	     	   		content.style.maxHeight = null;
+	     	   }else{
+	     	   		content.style.maxHeight = content.scrollHeight + "px";
+	     	   		$('#chimchom2-descriptive').animate({scrollTop: jQuery(content).offset().top}, 200);
+	     	   }
+
+	     	   if(currentOpen !== null && currentOpen !== content){
+	     	   	currentOpen.style.maxHeight = null;
+	     	   }
+			}
 
 			function moveContent(checker){
 				var div1;
@@ -197,6 +213,8 @@ $(document).ready(function(){
 					$div1 = $("#chimchom-descriptive");
 					$div2 = $("#chimchom2-descriptive");
 					onPage = 3;
+
+
 				}
 
 				//moves nav bars to the left!
@@ -217,13 +235,15 @@ $(document).ready(function(){
 				$div1.animate({
 					right: newWidthHolder,
 					width:''
-				},300);
+				},700);
 
 				$div2.animate({
-					right: newWidthHolder,
+					right: "0",
 					width:''
 
-				},300);
+				},700);
+
+
 			};
 
 			//makes the nav boxes hold basic icons rather than text.
@@ -282,17 +302,17 @@ $(document).ready(function(){
 					$("#chimchom-descriptive").animate({
 						width:newWidthHolder,
 						right:"0"
-					},1100);
+					},700);
 				}else if(decider ==2){
 					$("#chimchom2-descriptive").animate({
 						width:newWidthHolder,
 						right:"0"
-					},1500);
+					},700);
 				}else if(decider == 3){
 					$("#chimchom3-descriptive").animate({
 						width:newWidthHolder,
 						right:"0"
-					},1500);
+					},700);
 				}
 				// }else{
 				// 	$("#header-descriptive,#about-descriptive, #contact-descriptive").animate({
@@ -354,15 +374,15 @@ $(document).ready(function(){
 
 				$("#welcome").css({
 					"padding-top": welcomeNavCentering + "px",
-					"font-size": "35px"
+					"font-size": "200%"
 				});
 				$("#about").css({
 					"padding-top": aboutNavCentering + "px",
-					"font-size": "35px"
+					"font-size": "200%"
 				});
 				$("#contact").css({
 					"padding-top": contactNavCentering + "px",
-					"font-size": "35px"
+					"font-size": "200%"
 				});
 				
 				
@@ -383,16 +403,28 @@ $(document).ready(function(){
 
                 $("#welcome").css({
 					    "padding-top": welcomeNavCentering + "px",
-				    	"font-size": "35px"
+				    	"font-size": "200%"
 			    });
 			     $("#about").css({
 					    "padding-top": aboutNavCentering + "px",
-				    	"font-size": "35px"
+				    	"font-size": "200%"
 			    });
 			     $("#contact").css({
 					    "padding-top": contactNavCentering + "px",
-				    	"font-size": "35px"
+				    	"font-size": "200%"
 			    });
+            }
+
+
+            function setWidthOfDescriptions(width){
+            	var windowWidth = width;
+            	var descriptionWidth = windowWidth * .75;
+
+            	console.log(windowWidth + "*" + ".75" + "=" + descriptionWidth);
+
+            	$("#chimchom-descriptive p, #chimchom2-descriptive p, #chimchom3-descriptive p").css({
+            		width: descriptionWidth + "px"
+            	});
             }
 
     
