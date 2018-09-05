@@ -5,31 +5,18 @@ html,body{
 	padding: 0;
 
 	min-width: 300px;
-/*	min-height: 450px;*/
-
-	/*background: black;*/
-
-/*	z-index: -5;*/
-	/*background:rgb(255,255,0);*/
 }
 
 #actual_collapsable1,#actual_collapsable2,#actual_collapsable3,#actual_collapsable4{
-    /*position:absolute;*/
-    /*border:3px double rgb(30,30,30);*/
-    /*width:700px;*/
-
-    /*border: 2px double green;*/
     border-radius: 0px 0px 0px 0px;
 
     max-height:0px;
     
     padding:0px 10px;
-    /*padding-left:70px;*/
+ 
     margin:0;
-    /*margin-left:70px;*/
+ 
     font-weight:bold;
-    /*height:0;*/
-    /*display:none;*/
 
     overflow:hidden;
 
@@ -38,20 +25,6 @@ html,body{
 
     transition: max-height .25s ease-out;
 }
-
-/*#actual_collapsable1{*/
-/*      background:red;*/
-/*}*/
-/*#actual_collapsable2{*/
-/*      background:yellow;*/
-/*}*/
-/*#actual_collapsable3{*/
-/*      background:blue;*/
-/*}*/
-
-/*#actual_collapsable4{*/
-/*      background:green;*/
-/*}*/
 
 #collapsable1, #collapsable2, #collapsable3, #collapsable4{
 	opacity: .55;
@@ -64,12 +37,9 @@ html,body{
 }
 
 #kareem{
-/*	width:500;
-	height: 500;*/
-	/*background: black;*/
 	z-index: 500;
 	position: fixed;
-	/*bottom: 0;*/
+
 	left:-1000px;
 }
 
@@ -104,8 +74,6 @@ li{
 
 	z-index: 6;
 }
-
-
 
 #go-back:hover{
 	cursor: pointer;
@@ -150,17 +118,14 @@ li{
 
 #chimchom-descriptive{
 	z-index: 5;
-	/*background: orange;*/
 }
 
 #chimchom2-descriptive{
 	z-index: 4;
-	/*background: blue;*/
 }
 
 #chimchom3-descriptive{
 	z-index: 3;
-	/*background: yellow;*/
 }
 
 #chimchom-descriptive, #chimchom2-descriptive, #chimchom3-descriptive{
@@ -173,7 +138,6 @@ li{
 	top: 0px;
 
 	margin:0px;
-	/*margin-top: 50px;*/
 
 	width: 0%;
 	height: 100%;
@@ -185,29 +149,35 @@ li{
 }
 
 #chimchom-descriptive p, #chimchom2-descriptive p, #chimchom3-descriptive p{
-	font-size: 12px;
+	font-size: 18px;
 
+	/*watch out for dat*/
 	padding-left: 70px;
-	width: 65%;
-	/*position: fixed;*/
-	/*left: 250px;*/
+
+	/*note that I made the width static here, which leads to less of a dynamic, responsive site, but there is always time to go back and fix this
+	for now tho, the set widths of the description pages are fine! and if they dont fully fit on computer screens, scroll capabilities are always there*/
+	width: 1200px;
 }
+
 .h2-holder{
 	position: relative;
 	left: 70px;
+
 	border-bottom: 1px solid green;
+
 	margin:0;
 	padding: 0 0 15px 0;
-	margin-bottom: 35px;
-	width:600px;
+	margin-bottom: 30px;
+
+	width:700px;
+
+	font-size: 30px;
 }
 
 #chimchom-descriptive h2, #chimchom2-descriptive h2, #chimchom3-descriptive h2{
 	padding-bottom: 0;
 	margin-bottom: 0;
 	
-	/*padding-left: 350px;*/
-	width: 60%;
 }
 
 a:hover{
@@ -222,8 +192,6 @@ a:hover{
 	display: none;
 
 	opacity: 0;
-	
-	/*padding-top:60px;*/
 
 	transition: opacity 2s;
 
@@ -235,10 +203,10 @@ a:hover{
 	padding-top: 40px;
 
 	width:20%;
-/*	min-height: 50%;*/
 	min-width: 550px;
+
 	font-size: .95vw;
-	/*height:70%;*/
+
 	color:green;
 
 	left:315px;
@@ -246,16 +214,12 @@ a:hover{
 
 #about-descriptive{
 	z-index: -2;
-	/*background: grey;*/
 }
 
 #contact-descriptive{
 	z-index: -3;
 
 	left: 270px;
-
-
-	/*background: blue;*/
 }
 
 #contact-descriptive p{
@@ -291,27 +255,54 @@ a:hover{
 }
 
 #imgHolder{
+	width:400px;
+	height: 400px;
+
 	z-index: -3;
-	filter: invert(100%);
+	filter: invert(45%);
 
 	margin: 0;
 
-	position: relative;
-	right: -50%;
-	bottom: 190px;
+	position: absolute;
 
+	right:100px;
+	top:300px;
 
-	transform:rotate(-10deg);
+	transform:rotate(45deg);
 	/*ALSO VERY IMPORTANT FOR MAKING ANIMATION GO ON FOREVER!!!*/
 	/*NO JS NEEDED!!!!!!!!!!!!!!!!!*/
-	animation:rotation 5s infinite linear;
+	animation:grow .5s infinite ease-out;
 	/*VERY IMPORTANT FOR MAKING ANIMATION GO BACC N FORTH!!!!!!!!!!!!!!!!*/
 	animation-direction: alternate;
 }
 
-@keyframes rotation{
-	from{transform: rotate(-10deg);}
-	to{transform:rotate(10deg);}
+
+@keyframes grow{
+	from{bottom:10%;}
+	to{bottom:80%;}
+}
+
+#resume, #email{
+	color:white;
+}
+
+
+#navs{
+		padding: 0px 0px 0px 70px;
+		margin-top:25px;
+		/*text-align: center;*/
+		list-style: none;
+}
+
+.outside{
+	display: inline-block;
+}
+
+#navs img{
+	width:150px;
+	height: 150px;
+
+	filter: invert(100%);
 }
 
 #p5-canvas-holder canvas, #p5-canvas-holder{
@@ -345,73 +336,52 @@ a:hover{
 }*/
 
 #header-text{
-	/*border-radius: 5500px;*/
-
-/*	WHOA WHOA WHOA WHOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-I JUST FIGURED SOMETHING OUT BY MISTAKE; I HAVE JAVASCRIPT SETTING THE HEIGTH OF MY
-DIVS ACCORDING TO THE WINDOW SIZE, SO I CAME HERE TO GET RID OF THEIR WIDTH N HEIGHT DECLARATION
-BUT NOW IT STRETCHES THEM ALL THE WAY OUT! AND I KINDA LIKE IT!... HM, WHY DOES IT DO THAT THO
+	/*	WHOA WHOA WHOA WHOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	I JUST FIGURED SOMETHING OUT BY MISTAKE; I HAVE JAVASCRIPT SETTING THE HEIGTH OF MY
+	DIVS ACCORDING TO THE WINDOW SIZE, SO I CAME HERE TO GET RID OF THEIR WIDTH N HEIGHT DECLARATION
+	BUT NOW IT STRETCHES THEM ALL THE WAY OUT! AND I KINDA LIKE IT!... HM, WHY DOES IT DO THAT THO
 
 
-i THINK I KNOW WHY... MAYBE BECAUSE ITS PARENT DIVS... BUBBLE HOLDER??? SPANS 100%
-ACROSS AND NOW SINCE I HAVENT SPECIFIED A WIDTH, IT AUTO ADJUSTS TO ITS PARENTS... IDK, JUST A THOUGHT
-BUT JUST KNOW TO UNCOMMENT THIS IF YOU WANT YOUR BOXES BACK!!!!!!!!!*/
+	i THINK I KNOW WHY... MAYBE BECAUSE ITS PARENT DIVS... BUBBLE HOLDER??? SPANS 100%
+	ACROSS AND NOW SINCE I HAVENT SPECIFIED A WIDTH, IT AUTO ADJUSTS TO ITS PARENTS... IDK, JUST A THOUGHT
+	BUT JUST KNOW TO UNCOMMENT THIS IF YOU WANT YOUR BOXES BACK!!!!!!!!!*/
+
 /*	width:125px;
 	height:125px;*/
 
 	position: absolute;
 
 	padding: 25px;
-	/*margin:0 auto;*/
-
 
 	min-width: 210px;
 
-	/*background: #3B3B98;*/
-
 	position: relative;
+
 }
 
 #about-section{
-	/*border-radius: 5500px;*/
-
-/*	width:125px;
-	height:125px;*/
-
 	padding: 25px;
-	/*margin:0 auto;*/
 
 	min-width: 210px;
 
 	position: relative;
-	
-/*	background: #FC427B*/
 }
 
 #contact-section{
-	/*border-radius: 5500px;*/
-	
-/*	width:125px;
-	height:125px;*/
-	
 	padding: 25px;
-	/*margin:0 auto;*/
 
 	min-width: 210px;
 
 	position: relative;
-	
-/*	background: #6D214F*/
+
 }
 
 #welcome, #about, #contact{
 	opacity: 0;
 	font-family: 'Space Mono';
-	font-size: 25px;
+	font-size: 45px;
 	text-align: center;
 	margin:0 auto;
-
-	/*padding-top:20px;*/
 
 	transition: opacity 1s;
 }
@@ -423,10 +393,10 @@ BUT JUST KNOW TO UNCOMMENT THIS IF YOU WANT YOUR BOXES BACK!!!!!!!!!*/
 	opacity: 0;
 	color: white;
 	font-family: 'Space Mono';
-	font-size: 13.5px;
+	font-size: 15px;
 	text-align: center;
 
-	transition: opacity 2s;
+	transition: opacity 1s ease-out;
 }
 
 #header-text:hover #welcome, #header-text:hover #welcome-text{
@@ -458,6 +428,7 @@ BUT JUST KNOW TO UNCOMMENT THIS IF YOU WANT YOUR BOXES BACK!!!!!!!!!*/
 	opacity: 1;
 	cursor: pointer;
 }
+
 
 
 

@@ -22,14 +22,39 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- <script src="transition.js"></script> -->
 
-
-
 	<script src="index.js"></script>
 </head>
 
 
 <body>
+
+
+	<div id="bubble-holder">
+		<div id="header-text">
+			<img id = "header-mini-pic">
+			<h2 id="welcome">HELLO & WELCOME!</h2>
+			<p id="welcome-text">PLEASE FEEL FREE TO EXPLORE THROUGH HERE AND SEE IF YOU FIND ANYTHING YOU LIKE! THERES NOT MUCH AT THE MOMENT, BUT GIVE ME SOME TIME AND MORE AND MORE THINGS SHOULD START APPEARING.</p>
+		</div>
+
+		<div id = "about-section">
+			<img id = "about-mini-pic">
+			<h2 id="about">LEARN ABOUT ME</h2>
+			<p id="about-text">I'VE HAD A LOT OF FUN WORKING ON VARIOUS PROJECTS OVER MY COLLEGE CAREER. YOU CAN COME FIND SOME OF THEM HERE!</p>
+		</div>
+
+		<div id = "contact-section">
+			<img id = "contact-mini-pic">
+			<h2 id="contact">CONTACT ME</h2>
+			<p id="contact-text">IF YA NEED TO CONTACT ME, YOU'LL FIND ALL THAT INFO IN HERE! EMAIL ME, CALL ME, TEXT ME, YOU CAN EVEN FAX ME!</p>
+		</div>
+	</div>
+
+<!-- //////////////////////////////////////////////////////////////////////  -->
+
 	<div id = "kareem"><img id="kareemimg" src="./Images/kareem_abdul!.png"></div>
+
+<!-- //////////////////////////////////////////////////////////////////////  -->
+
 	<div id ="go-back">
 		<img src="./Images/back-button.png" id="go">
 	</div>
@@ -37,23 +62,22 @@
 	<div id="chimchom-descriptive">
 		<div class="h2-holder"><h2>I'm Kareem Shehab</h2></div>
 		<p>I am currently a senior over at Georgia State University, pursuing a degree in Computer Science with a concentration in Databases and Knowledge Based Systems.</p>
-		<p>I've been writing codes and dealing with bugs since 2014, eat my ass</p>
-		<p>And I especially like evolutionary systems and their play in computer science; such as genetic algorithms and machine learning agents. I've used a very helpful library recently for visualizing programs called p5.js in order to create several web-based artificial systems. Some of which are embedded in the site!</p>
+		<p>I've been writing code and dealing with bugs since 2014, and have become fully aware that no matter how much I learn, there always seems to be something new coming out there that it's time to become aquanted with.</p>
+		<p>I especially like evolutionary systems and their play in computer science; such as genetic algorithms and machine learning agents. I've used a very helpful library recently for visualizing programs called p5.js in order to create several web-based artificial systems. Some of which are embedded in the site!</p>
+		<p>Although it's not my forte, I also have begun experimenting with networking and real time communications within web-based applications. I've seen some people come up with some really creative things such as messaging apps, collaborative drawing, and just simple multiplayer games all in browser. 
 		<br>
 		<br>
-		<p></p>
 	</div>
 
 	<div id="chimchom2-descriptive">
-		<div class="h2-holder"><h2>Who am I Though?</h2></div>
-		<p>I've worked on various personal projects over my <b><u>4 years of programming</u></b>, ranging from artificial system designs and web server construction/management all the way to this website you're on now!</p>
+		<div class="h2-holder"><h2>I'm More Than Just Kareem Though!</h2></div>
 
-		<p>I am very adept working with <b><u>Java, C#, Python, JavaScript, HTML5, CSS, jQuery, Linux, mySQL, PHP, and Assembly Language for x86 Processors</u></b>, along with some other things I am relatively adequate with such as <b><u>C, C++, and Shell Scripting</u></b></p>
+		<p>I've worked on various personal projects over my <b><i>4 years of programming</i></b>, ranging from artificial system designs, financial data mining, and scalable network applications, all the way to this website you're on now!</p>
+
+		<p>I am very adept working with <b><i>Java, C#, Python, JavaScript, HTML5, CSS3, jQuery, Linux, mySQL, PHP, and Assembly Language for x86 Processors</i></b>, along with some other things I am relatively adequate with such as <b><i>C, C++, Node, React, and Shell Scripting</i></b></p>
 		<br>
 		<br>
 		<p>To get a bit more specific, here's a nice compiled list of projects I've had the most fun with and learned the most with!</p>
-		
-	
 
 		<ul>
 			<li id="collapsable1"><img src ="./Images/rainbow (1).png" width="80" height="80"></li>
@@ -61,6 +85,7 @@
 			<li id="collapsable3"><img src ="./Images/robot.png" width="80px" height="80px"></li>
 			<li id="collapsable4"><img src ="./Images/server.png" width="80px" height="80px"></li>
 		</ul>
+
 		<div id="actual_collapsable1">
 		    <p>I'd have to say one of the most fun and enriching projects I took on was building an evolutionary algorithm in a manner that conveyed optimization in a great way. Here, I told my computer I wanted the perfect DOUBLE rainbow... and my computer sought to give me this! Through genetic algorithms the program I made was able to utilize biological concepts suchs as genetic mutation, gene splicing, and the elemental workings of "survival of the fittest" to find perfect double rainbows in 1/8^8 times the speed of other brute force algorithms!</p>
 		    <p>If you'd like to see it in action, you can find it <b><a href="The_Genetic_Rainbow/index.html">HERE</a></b></p>
@@ -75,7 +100,7 @@
 		    <p>LAST TESTER!!!!!!!!!!!!!!!!!!!!!!LAST TESTER!!!!!!!!!!!!!!!!!!!!!LAST TESTER!!!!!!!!!!!!!!!!!!!!!LAST TESTER!!!!!!!!!!!!!!!!!!!!!LAST TESTER!!!!!!!!!!!!!!!!!!!!!LAST TESTER!!!!!!!!!!!!!!!!!!!!!LAST TESTER!!!!!!!!!!!!!!!!!!!!!LAST TESTER!!!!!!!!!!!!!!!!!!!!!</p>
 		</div>
 		<br>
-		<p>If you're looking for a more structured version of all this junk, you can download a copy of my resume <a href="file:///C:/Users/kshehab1/Downloads/KareemShehab_Resume.pdf">HERE</a></p>
+		<p>If you're looking for a more structured version of all this stuff, including some real jobs I've had, you can download a copy of my resume <a id="resume" href="file:///C:/Users/kshehab1/Downloads/KareemShehab_Resume.pdf"><b>HERE</b></a></p>
 		
 		
 		<!--<p>eat this boi puzzy</p>-->
@@ -84,46 +109,32 @@
 	<div id="chimchom3-descriptive">
 
 		<div class="h2-holder"><h2>Please, feel free to contact me!</h2></div>
-		<p>We don't even have to talk about jobs and programs. Maybe we can just talk about how punishing life is... damn...</p>
+		<p>We can talk about any positions you may have opened, or we can just talk about life! Either one is fine with me!</p>
 
 		<br>
 		<br>
 		<br>
-		<p>By email at <a href="https://www.facebook.com">kshehab1@student.gsu.edu</a></p>
-		<p>Or by phone at 404 - 697 - 4678</p>
-		<p>Or even come see me over in Atlanta!</p>
 
+		<div id="talky">
+			<p>By email at <a id = "email" href="https://www.facebook.com">kshehab1@student.gsu.edu</a></p>
+			<p>Or by phone at 404 - 697 - 4678</p>
+			<p>Or even come see me over in Atlanta!</p>
+			<!-- <p> Find me on  <b><a href="https://www.linkedin.com">LinkedIn</a></b> and <b><a href="https://www.github.com">GitHub</a></b> too!</p> -->
+		</div>
 
-		<p> Find me on  <b><a href="https://www.linkedin.com">LinkedIn</a></b> and  <b><a href="https://www.github.com">GitHub</a></b> too!</p>
+		<div id="findy">
+			<ul id="navs">
+				<li class='outside'><a href="https://github.com/Musilix"><img src="./Images/github.png"></a></li>
+				<li class='outside'><a href="https://www.linkedin.com/in/kareem-shehab-a95162154/"><img src="./Images/linked.png"></a></li>
+			</ul>
+		</div>
+<!-- 
 
-
-		<img  id ="imgHolder" src="./Images/georgia.png" width="200" height="200px">
+		<img  id ="imgHolder" src="./Images/georgia.png"> -->
 	</div>
-
-<!-- //////////////////////////////////////////////////////////////////////  -->
 
 	<!-- <div id="p5-canvas-holder"></div> -->
 
-	<div id="bubble-holder">
-		<div id="header-text">
-			<img id = "header-mini-pic">
-			
-			<h2 id="welcome">WHY, HELLO! </h2>
-			<p id="welcome-text">AND WELCOME TO THE WORLD OF A GOD. PLEASE EXPLORE MY WORK AND REALIZE HOW I HAVE BROKEN FROM THE PLEBIAN BLOB KNOWN AS SOCIETY... I AM KANYE WEST</p>
-		</div>
-
-		<div id = "about-section">
-			<img id = "about-mini-pic">
-			<h2 id="about">LEARN ABOUT ME</h2>
-			<p id="about-text">LISTEN... IF FOR SOME REASON, ON SOME DAY, AT SOME TIME, YOU ARE ON THIS WEBSITE AND WANT TO KNOW ABOUT ME... THEN YOU NEED TO FUCK OFF</p>
-		</div>
-
-		<div id = "contact-section">
-			<img id = "contact-mini-pic">
-			<h2 id="contact">CONTACT ME</h2>
-			<p id="contact-text">HEY YA FUCKO, IF YA NEED TO CONTACT ME, YOU'LL FIND ALL THAT INFO IN HERE!</p>
-		</div>
-	</div>
 
 
 <!-- this is for giving a bg color to ur html -->
