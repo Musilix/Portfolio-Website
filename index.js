@@ -101,6 +101,7 @@ $(document).ready(function(){
 				//there is a variable, onPage always keeping track of which page we are on atm, in order to
 				//update the current windows width in realtime rather than waiting for us to click the nav button for the page again. yeehaw
 				centerTextInNavs();
+// 				setWidthOfDescriptions(parseInt(newWidthHolder));
 				newWidthHolder = $(window).width() - 260 + 'px';
 
 				if(onPage == 1){
@@ -142,6 +143,7 @@ $(document).ready(function(){
 				showKareem();
 				bringBackContent(1);
 				moveContent(1);
+				setWidthOfDescriptions(parseInt(newWidthHolder));
 				updateContent();
 			});
 
@@ -149,6 +151,7 @@ $(document).ready(function(){
 				showKareem();
 				bringBackContent(2);
 				moveContent(2);
+				setWidthOfDescriptions(parseInt(newWidthHolder));
 				updateContent();
 			});
 
@@ -156,6 +159,7 @@ $(document).ready(function(){
 				showKareem();
 				bringBackContent(3);
 				moveContent(3);
+				setWidthOfDescriptions(parseInt(newWidthHolder));
 				updateContent();
 			});
 
