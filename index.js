@@ -101,7 +101,7 @@ $(document).ready(function(){
 				//there is a variable, onPage always keeping track of which page we are on atm, in order to
 				//update the current windows width in realtime rather than waiting for us to click the nav button for the page again. yeehaw
 				centerTextInNavs();
-// 				setWidthOfDescriptions(parseInt(newWidthHolder));
+				// setWidthOfDescriptions(parseInt(newWidthHolder));
 				newWidthHolder = $(window).width() - 260 + 'px';
 
 				if(onPage == 1){
@@ -254,6 +254,7 @@ $(document).ready(function(){
 			//since the nav boxes have gotten significantly smaller. idk, i think its nice!
 			function updateContent(){
 			    var spacer = ($("#header-text").height() - 120 ) / 2;
+			    // console.log(spacer);
 				$("#header-mini-pic").css({
 					"width": "120px",
 					"height": "120px",
