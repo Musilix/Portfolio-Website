@@ -7,7 +7,26 @@ html,body{
 	min-width: 300px;
 }
 
-#actual_collapsable1,#actual_collapsable2,#actual_collapsable3,#actual_collapsable4{
+::-webkit-scrollbar #actual_collapsable1,#actual_collapsable2,#actual_collapsable3,#actual_collapsable4, #actual_collapsable5{
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track #actual_collapsable1,#actual_collapsable2,#actual_collapsable3,#actual_collapsable4, #actual_collapsable5{
+	background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb #actual_collapsable1,#actual_collapsable2,#actual_collapsable3,#actual_collapsable4, #actual_collapsable5{
+	background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover #actual_collapsable1,#actual_collapsable2,#actual_collapsable3,#actual_collapsable4, #actual_collapsable5{
+	background: #555;
+  }
+
+#actual_collapsable1,#actual_collapsable2,#actual_collapsable3,#actual_collapsable4, #actual_collapsable5{
     border-radius: 0px 0px 0px 0px;
 
     max-height:0px;
@@ -18,7 +37,8 @@ html,body{
  
     font-weight:bold;
 
-    overflow:hidden;
+	overflow-y:scroll;
+    overflow-x:hidden;
 
     color:black;
     background:rgb(200,240,220);
@@ -31,7 +51,7 @@ html,body{
 	transition: opacity .5s ease-out;
 }
 
-#collapsable1:hover, #collapsable2:hover, #collapsable3:hover, #collapsable4:hover{
+#collapsable1:hover, #collapsable2:hover, #collapsable3:hover, #collapsable4:hover,  #collapsable5:hover{
     cursor: pointer;
     opacity:1.5;
 }
@@ -134,7 +154,7 @@ li{
 	resize: both;
 	overflow: auto;
 
-	left: 260px;
+	/* left: 260px; */
 	top: 0px;
 
 	margin:0px;
@@ -149,14 +169,14 @@ li{
 }
 
 #chimchom-descriptive p, #chimchom2-descriptive p, #chimchom3-descriptive p{
-	font-size: 1vw;
+	font-size: 16.66px;
 
 	/*watch out for dat*/
 	padding-left: 70px;
 
 	/*note that I made the width static here, which leads to less of a dynamic, responsive site, but there is always time to go back and fix this
 	for now tho, the set widths of the description pages are fine! and if they dont fully fit on computer screens, scroll capabilities are always there*/
-	width: 75%;
+	/* width: 75%; */
 }
 
 .h2-holder{
